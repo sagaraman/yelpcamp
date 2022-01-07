@@ -63,7 +63,7 @@ store.on("error", function (e) {
   console.log("SESSION STORE ERROR", e)
 })
 
-const secret = process.env.SECRET || "thisshouldbeabettersecret!",
+const secret = process.env.SECRET || "thisshouldbeabettersecret!";
 
 const sessionConfig = {
   store,
@@ -75,8 +75,8 @@ const sessionConfig = {
     httpOnly: true,
     // secure: true,
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-    maxAge: 1000 * 60 * 60 * 24 * 7,
-  },
+    maxAge: 1000 * 60 * 60 * 24 * 7
+  }
 };
 
 app.use(session(sessionConfig));
